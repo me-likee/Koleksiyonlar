@@ -89,3 +89,30 @@ RenkListesi.ForEach(renk=>Console.WriteLine(renk));
         public string Yas { get => yas ; set=> yas =value; }
     }
     
+    //ARRAY LİSTESİ birden fazla veritipini tutabiliriz
+
+   
+namespace arraylist
+{
+    class program
+    {
+        static void Main(string[] args)
+        {
+                
+         ArrayList listelerim=new ArrayList(); 
+         listelerim.Add("Melike");
+         listelerim.Add(2);
+         listelerim.Add(true);
+
+         string[] renkler={"kırmızı","mavi","mor"};
+         List<int> sayilarim=new List<int>(){1,3,6,9,54};
+         listelerim.AddRange(renkler);
+         listelerim.AddRange(sayilarim);
+
+         foreach (var item in listelerim)
+            Console.WriteLine(item);
+        listelerim.Reverse();
+        }
+    }
+   
+}
